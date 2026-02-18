@@ -1,0 +1,20 @@
+[
+    {
+        "nom": "Email",
+        "valeur": "jean.dupont@email.com",
+        "img": null,
+        "lien": "mailto:jean.dupont@email.com"
+    },
+    {
+        "nom": "LinkedIn",
+        "valeur": "linkedin.com/in/jeandupont",
+        "img": null,
+        "lien": "https://linkedin.com/in/jeandupont"
+    },
+    {
+        "nom": "GitHub",
+        "valeur": "github.com/jeandupont",
+        "img": null,
+        "lien": "https://github.com/jeandupont"
+    }
+]

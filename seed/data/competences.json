@@ -1,0 +1,17 @@
+[
+    {
+        "nom": "python"
+    },
+    {
+        "nom": "react"
+    },
+    {
+        "nom": "mongodb"
+    },
+    {
+        "nom": "neo4j"
+    },
+    {
+        "nom": "docker"
+    }
+]

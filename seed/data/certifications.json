@@ -1,0 +1,14 @@
+[
+    {
+        "description": "AWS Certified Cloud Practitioner",
+        "date": "2024-06",
+        "img": null,
+        "lien": "https://aws.amazon.com/certification/"
+    },
+    {
+        "description": "MongoDB Associate Developer",
+        "date": "2024-03",
+        "img": null,
+        "lien": "https://university.mongodb.com/"
+    }
+]
