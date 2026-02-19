@@ -1,17 +1,22 @@
 [
     {
-        "nom": "python"
+        "nom": "python",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/3840px-Python-logo-notext.svg.png"
     },
     {
-        "nom": "react"
+        "nom": "react",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/3840px-React-icon.svg.png"
     },
     {
-        "nom": "mongodb"
+        "nom": "mongodb",
+        "img": null
     },
     {
-        "nom": "neo4j"
+        "nom": "neo4j",
+        "img": null
     },
     {
-        "nom": "docker"
+        "nom": "docker",
+        "img": null
     }
 ]

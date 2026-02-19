@@ -39,7 +39,7 @@ async def seed_mongo():
 
     # On nettoie d'abord les collections existantes
     collections = ["moi", "projets", "competences", "hobbies",
-                   "certifications", "contact", "langues"]
+                   "certifications", "contact", "langues", "etudes"]
     for col in collections:
         await db[col].delete_many({})
 
@@ -56,6 +56,7 @@ async def seed_mongo():
         "certifications": "certifications.json",
         "contact": "contact.json",
         "langues": "langues.json",
+        "etudes": "etudes.json",
     }
     for col_name, filename in mapping.items():
         data = load_json(filename)
@@ -102,13 +103,15 @@ async def seed_neo4j():
         # Nettoyer le graphe
         await session.run("MATCH (n) DETACH DELETE n")
 
-        # Créer les nœuds Competence (nom uniquement)
+        # Créer les nœuds Competence (nom + img)
         for comp in competences:
             await session.run(
                 """
                 MERGE (c:Competence {nom: $nom})
+                SET c.img = $img
                 """,
                 nom=comp["nom"],
+                img=comp.get("img"),
             )
         print(f"  ✅ Neo4j : {len(competences)} nœuds Competence créés")
 
@@ -127,14 +130,12 @@ async def seed_neo4j():
                     MATCH (c:Competence {nom: $comp_nom})
                     CREATE (p)-[:A_IMPLIQUE {
                         description: $description,
-                        img: $img,
                         lien: $lien
                     }]->(c)
                     """,
                     titre=proj["titre"],
                     comp_nom=comp_data["nom"],
                     description=comp_data.get("description", ""),
-                    img=comp_data.get("img"),
                     lien=comp_data.get("lien"),
                 )
         print(f"  ✅ Neo4j : {len(projets)} nœuds Projet créés avec relations")

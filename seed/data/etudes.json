@@ -1,0 +1,18 @@
+[
+    {
+        "titre": "Master Informatique",
+        "etablissement": "Université de Paris",
+        "description": "Spécialisation en intelligence artificielle et systèmes distribués.",
+        "periode": "2023 - 2025",
+        "diplome": "Master",
+        "lien": null
+    },
+    {
+        "titre": "Licence Informatique",
+        "etablissement": "Université de Lyon",
+        "description": "Formation générale en informatique : algorithmique, bases de données, réseaux.",
+        "periode": "2020 - 2023",
+        "diplome": "Licence",
+        "lien": null
+    }
+]

@@ -6,19 +6,16 @@
             {
                 "nom": "python",
                 "description": "Utilisé pour le backend FastAPI",
-                "img": null,
                 "lien": null
             },
             {
                 "nom": "react",
                 "description": "Frontend avec composants dynamiques",
-                "img": null,
                 "lien": null
             },
             {
                 "nom": "mongodb",
                 "description": "Stockage des données du portfolio",
-                "img": null,
                 "lien": null
             }
         ],
@@ -33,19 +30,16 @@
             {
                 "nom": "python",
                 "description": "Scripts d'automatisation et API REST",
-                "img": null,
                 "lien": null
             },
             {
                 "nom": "neo4j",
                 "description": "Modélisation des relations entre produits",
-                "img": null,
                 "lien": null
             },
             {
                 "nom": "docker",
                 "description": "Conteneurisation de l'application",
-                "img": null,
                 "lien": null
             }
         ],
@@ -60,19 +54,16 @@
             {
                 "nom": "python",
                 "description": "Intégration des modèles de langage",
-                "img": null,
                 "lien": null
             },
             {
                 "nom": "docker",
                 "description": "Déploiement multi-conteneurs",
-                "img": null,
                 "lien": null
             },
             {
                 "nom": "react",
                 "description": "Interface de chat temps réel",
-                "img": null,
                 "lien": null
             }
         ],

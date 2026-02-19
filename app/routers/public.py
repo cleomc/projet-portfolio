@@ -54,3 +54,9 @@ async def contact():
 async def langues():
     """Retourne les langues parlées."""
     return await crud_service.get_all_langues()
+
+
+@router.get("/etudes")
+async def etudes():
+    """Retourne les études / formations."""
+    return await crud_service.get_all_etudes()

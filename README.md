@@ -17,6 +17,9 @@ docker compose exec api python -m seed.seed
 
 # 3. Vérifier que tout fonctionne
 curl http://localhost:8000/health
+
+# 4 voir les msg api en live
+docker compose logs -f api
 ```
 
 ## Endpoints
@@ -54,8 +57,6 @@ Une fois lancé, la doc Swagger est accessible sur :
 ## Neo4j Browser
 
 Visualisez le graphe directement : [http://localhost:7474](http://localhost:7474)
-- User : `neo4j`
-- Password : `portfolio_secret`
 
 ## Structure du projet
 

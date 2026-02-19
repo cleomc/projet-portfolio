@@ -75,3 +75,10 @@ async def get_all_contacts() -> list[dict]:
 async def get_all_langues() -> list[dict]:
     docs = await mongo_repo.get_all_langues()
     return _serialize_list(docs)
+
+
+# ── Études ───────────────────────────────────────
+
+async def get_all_etudes() -> list[dict]:
+    docs = await mongo_repo.get_all_etudes()
+    return _serialize_list(docs)
