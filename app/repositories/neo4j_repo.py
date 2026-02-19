@@ -46,10 +46,13 @@ async def get_all_competences():
     return records
 
 async def get_projects_by_competence(nom: str):
-    """Retourne les projets liés à une compétence donnée."""
+    """Retourne les projets liés à une compétence donnée, avec TOUTES leurs compétences."""
     driver = get_driver()
     query = """
-            MATCH (p:Projet)-[i:A_IMPLIQUE]->(c:Competence {nom : $nom}) RETURN p,i,c
+            MATCH (p:Projet)-[:A_IMPLIQUE]->(searched:Competence {nom: $nom})
+            WITH p
+            MATCH (p)-[i:A_IMPLIQUE]->(c:Competence)
+            RETURN p, i, c
         """
     async with driver.session() as session:
         result = await session.run(query, nom=nom)
