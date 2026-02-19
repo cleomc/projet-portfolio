@@ -2,10 +2,9 @@
 Fonctions de lecture / écriture dans MongoDB.
 
 """
-from typing import Optional
-
 from __future__ import annotations
 
+from typing import Optional
 
 from app.db.mongo import get_db
 
