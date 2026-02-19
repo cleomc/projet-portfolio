@@ -155,7 +155,7 @@ async def get_all_langues(limit: int = 200) -> list[dict]:
     return docs
 
 
-async def get_all_etudes():
+async def get_all_etudes(limit: int = 200) -> list[dict]:
     """Retourne toutes les études / formations."""
     db = get_db()
     docs = await db["etudes"].find({}).to_list(length=limit)
