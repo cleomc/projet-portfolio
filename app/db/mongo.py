@@ -1,4 +1,3 @@
-import ssl
 import certifi
 from motor.motor_asyncio import AsyncIOMotorClient
 from app.core.config import settings
@@ -12,9 +11,7 @@ async def connect_mongo():
     global client, db
     client = AsyncIOMotorClient(
         settings.MONGO_URI,
-        tls=True,
         tlsCAFile=certifi.where(),
-        tlsAllowInvalidCertificates=True,
     )
     db = client[settings.MONGO_DB_NAME]
     print(f"✅ MongoDB connecté — base : {settings.MONGO_DB_NAME}")
